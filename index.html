@@ -1,202 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manjot Singh | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manjot Singh | Portfolio</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, Helvetica, sans-serif;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        body{
-            background:#f4f7fc;
-            color:#333;
-        }
+<style>
 
-        header{
-            background:linear-gradient(135deg,#0d47a1,#1976d2);
-            color:white;
-            text-align:center;
-            padding:40px 20px;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
 
-        header h1{
-            font-size:40px;
-        }
+body{
+background:#f4f7fb;
+color:#333;
+}
 
-        header p{
-            margin-top:10px;
-            font-size:18px;
-        }
+/* Header */
 
-        .container{
-            width:90%;
-            max-width:1000px;
-            margin:30px auto;
-        }
+header{
+background:linear-gradient(135deg,#0d47a1,#1976d2);
+color:white;
+padding:70px 20px;
+text-align:center;
+}
 
-        section{
-            background:white;
-            padding:25px;
-            margin-bottom:25px;
-            border-radius:12px;
-            box-shadow:0 4px 12px rgba(0,0,0,0.1);
-        }
+header img{
+width:170px;
+height:170px;
+border-radius:50%;
+border:6px solid white;
+margin-bottom:20px;
+object-fit:cover;
+background:white;
+}
 
-        h2{
-            color:#1565c0;
-            margin-bottom:15px;
-            border-bottom:2px solid #1565c0;
-            display:inline-block;
-            padding-bottom:5px;
-        }
+header h1{
+font-size:45px;
+}
 
-        table{
-            width:100%;
-            border-collapse:collapse;
-            margin-top:15px;
-        }
+header p{
+margin-top:10px;
+font-size:20px;
+font-weight:300;
+}
 
-        table, th, td{
-            border:1px solid #ddd;
-        }
+/* Navigation */
 
-        th{
-            background:#1565c0;
-            color:white;
-        }
+nav{
+position:sticky;
+top:0;
+background:white;
+box-shadow:0 2px 8px rgba(0,0,0,.1);
+z-index:100;
+}
 
-        th, td{
-            padding:12px;
-            text-align:center;
-        }
+nav ul{
+display:flex;
+justify-content:center;
+list-style:none;
+}
 
-        a{
-            color:#1565c0;
-            text-decoration:none;
-            font-weight:bold;
-        }
+nav li{
+margin:15px;
+}
 
-        a:hover{
-            text-decoration:underline;
-        }
+nav a{
+text-decoration:none;
+font-weight:600;
+color:#1976d2;
+transition:.3s;
+}
 
-        footer{
-            text-align:center;
-            background:#0d47a1;
-            color:white;
-            padding:15px;
-            margin-top:30px;
-        }
+nav a:hover{
+color:#0d47a1;
+}
 
-        ul{
-            margin-left:20px;
-            margin-top:10px;
-        }
+/* Sections */
 
-        li{
-            margin-bottom:8px;
-        }
-    </style>
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+padding:40px 0;
+}
+
+section{
+background:white;
+padding:30px;
+margin-bottom:25px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+section:hover{
+transform:translateY(-5px);
+}
+
+h2{
+color:#1565c0;
+margin-bottom:20px;
+border-left:5px solid #1565c0;
+padding-left:10px;
+}
+
+/* Table */
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:#1565c0;
+color:white;
+}
+
+th,td{
+padding:15px;
+border:1px solid #ddd;
+text-align:center;
+}
+
+/* Skills */
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+}
+
+.skill{
+background:#1976d2;
+color:white;
+padding:20px;
+text-align:center;
+border-radius:10px;
+transition:.3s;
+font-weight:600;
+}
+
+.skill:hover{
+background:#0d47a1;
+transform:scale(1.05);
+}
+
+/* Social Buttons */
+
+.social{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.social a{
+padding:14px 25px;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+transition:.3s;
+}
+
+.github{
+background:#24292e;
+}
+
+.linkedin{
+background:#0077b5;
+}
+
+.twitter{
+background:#1DA1F2;
+}
+
+.social a:hover{
+transform:translateY(-5px);
+box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+/* Footer */
+
+footer{
+background:#0d47a1;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:30px;
+}
+
+/* Responsive */
+
+@media(max-width:700px){
+
+header h1{
+font-size:32px;
+}
+
+nav ul{
+flex-direction:column;
+align-items:center;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
 
 <header>
-    <h1>Manjot Singh</h1>
-    <p>Student | Aspiring Software Developer | Cloud & Linux Learner</p>
+
+<img src="https://via.placeholder.com/170" alt="Profile Photo">
+
+<h1>Manjot Singh</h1>
+
+<p>Aspiring Software Developer | Linux Enthusiast | Cloud Learner</p>
+
 </header>
+
+<nav>
+
+<ul>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#personal">Personal</a></li>
+
+<li><a href="#education">Education</a></li>
+
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
 
 <div class="container">
 
-    <section>
-        <h2>Personal Information</h2>
+<section id="about">
 
-        <p><strong>Name:</strong> Manjot Singh</p>
-        <p><strong>Profession:</strong> Student</p>
-        <p><strong>Career Goal:</strong> To become a skilled Software Developer with expertise in Cloud Computing, Linux, and Web Development.</p>
-    </section>
+<h2>About Me</h2>
 
-    <section>
-        <h2>About Me</h2>
+<p>
 
-        <p>
-            Hello! I'm <strong>Manjot Singh</strong>, a passionate technology enthusiast
-            interested in programming, Linux, cloud computing, and web development.
-            I enjoy learning new technologies, solving coding problems, and building
-            practical projects that improve my technical skills.
-        </p>
-    </section>
+Hello! I'm <strong>Manjot Singh</strong>, a passionate student with a strong interest in
+software development, Linux, cloud computing, web development, and problem-solving.
 
-    <section>
-        <h2>Education</h2>
+I enjoy learning modern technologies and building projects that improve my programming
+skills while preparing for a career in the IT industry.
 
-        <table>
-            <tr>
-                <th>Qualification</th>
-                <th>Institution</th>
-                <th>Status</th>
-            </tr>
+</p>
 
-            <tr>
-                <td>Bachelor's Degree</td>
-                <td>Your College Name</td>
-                <td>Currently Pursuing</td>
-            </tr>
+</section>
 
-            <tr>
-                <td>12th Grade</td>
-                <td>Your School Name</td>
-                <td>Completed</td>
-            </tr>
+<section id="personal">
 
-            <tr>
-                <td>10th Grade</td>
-                <td>Your School Name</td>
-                <td>Completed</td>
-            </tr>
-        </table>
-    </section>
+<h2>Personal Information</h2>
 
-    <section>
-        <h2>Skills</h2>
+<p><strong>Name:</strong> Manjot Singh</p>
 
-        <ul>
-            <li>HTML & CSS</li>
-            <li>Linux (Ubuntu)</li>
-            <li>AWS Cloud Basics</li>
-            <li>C Programming</li>
-            <li>Data Structures & Algorithms</li>
-            <li>Git & GitHub (Learning)</li>
-        </ul>
+<p><strong>Profession:</strong> Student</p>
 
-    </section>
+<p><strong>Career Goal:</strong> Become a Software Engineer specializing in Cloud Computing and Full Stack Development.</p>
 
-    <section>
-        <h2>LinkedIn Profile</h2>
+</section>
 
-        <p>
-            Visit my LinkedIn profile:
-        </p>
+<section id="education">
 
-        <br>
+<h2>Education</h2>
 
-        <a href="https://www.linkedin.com/in/manjot-singh-b64b923a7"
-           target="_blank">
-            www.linkedin.com/in/manjot-singh-b64b923a7
-        </a>
+<table>
 
-    </section>
+<tr>
+
+<th>Qualification</th>
+
+<th>Institution</th>
+
+<th>Status</th>
+
+</tr>
+
+<tr>
+
+<td>Bachelor's Degree</td>
+
+<td>Your College Name</td>
+
+<td>Currently Pursuing</td>
+
+</tr>
+
+<tr>
+
+<td>12th Grade</td>
+
+<td>Your School Name</td>
+
+<td>Completed</td>
+
+</tr>
+
+<tr>
+
+<td>10th Grade</td>
+
+<td>Your School Name</td>
+
+<td>Completed</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<section id="skills">
+
+<h2>Technical Skills</h2>
+
+<div class="skills">
+
+<div class="skill">HTML</div>
+
+<div class="skill">CSS</div>
+
+<div class="skill">Linux</div>
+
+<div class="skill">Git</div>
+
+<div class="skill">GitHub</div>
+
+<div class="skill">AWS Basics</div>
+
+<div class="skill">C Programming</div>
+
+<div class="skill">Data Structures</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Connect With Me</h2>
+
+<div class="social">
+
+<a class="github" href="https://github.com/your-github-username" target="_blank">
+GitHub
+</a>
+
+<a class="linkedin" href="https://www.linkedin.com/in/manjot-singh-b64b923a7" target="_blank">
+LinkedIn
+</a>
+
+<a class="twitter" href="https://twitter.com/your-twitter-username" target="_blank">
+Twitter (X)
+</a>
+
+</div>
+
+</section>
 
 </div>
 
 <footer>
-    © 2026 Manjot Singh | Portfolio Website
+
+<h3>Manjot Singh</h3>
+
+<p>© 2026 All Rights Reserved</p>
+
 </footer>
 
 </body>
